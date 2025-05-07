@@ -1,0 +1,216 @@
+/* CSS per il progetto Air Up - Reset 2025 */
+
+/* Stili per il menu */
+nav {
+    position: fixed;
+    width: 99%;
+    background-color: #40001C;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+#links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#links a {
+    margin: 0 20px;
+}
+
+/* Stili generali per il corpo */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#content-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 750px;
+    background-color: #40001C;
+    margin-top: 0;
+}
+
+#text-section {
+    flex-basis: 45%;
+    background-color: #40001C;
+    padding: 20px;
+    color: #FF90C0;
+}
+
+#image-section {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#image-section img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Font specifica per il progetto */
+@font-face {
+    font-family: 'Air Up Sans';
+    src: url('https://shop.air-up.com/_next/static/media/air-up-sans-display.28c4d0de.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Air Up Sans', sans-serif;
+}
+
+/* Stili per i testi */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 15px;
+}
+
+.highlight {
+    color: #04DA8D;
+}
+
+h3 {
+    font-size: 70px;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+
+/* Overlay per l'immagine del prodotto */
+.overlay-container {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.overlay-container img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sezione delle features */
+#features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #FDE5EC;
+    padding: 40px 20px;
+    text-align: center;
+    color: #40001C;
+}
+
+.feature {
+    max-width: 250px;
+    margin: 20px;
+}
+
+/* Sezione di selezione aroma */
+#aroma-selector {
+    text-align: center;
+    padding: 30px;
+    background-color: #FFEEF3;
+}
+
+.aroma-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.aroma-thumb {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.aroma-thumb:hover {
+    transform: scale(1.1);
+    border: 2px solid #40001C;
+}
+
+#aroma-display img {
+    width: 300px;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #40001C;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #content-box {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #image-section img {
+        height: auto;
+    }
+
+    #features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        margin-bottom: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    #links {
+        flex-direction: column;
+    }
+
+    .overlay-text {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+}
